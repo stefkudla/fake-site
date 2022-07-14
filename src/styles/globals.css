@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-Black.otf');
+  font-size: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-BlackIt.otf');
+  font-size: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-Bold.otf');
+  font-size: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-BoldIt.otf');
+  font-size: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-Semibold.otf');
+  font-size: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-SemiboldIt.otf');
+  font-size: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-Regular.otf');
+  font-size: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-It.otf');
+  font-size: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-Light.otf');
+  font-size: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-LightIt.otf');
+  font-size: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-ExtraLight.otf');
+  font-size: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../../public/fonts/SourceSansPro-ExtraLightIt.otf');
+  font-size: 200;
+  font-style: italic;
+}
+
+:root {
+  --color-fore-reddish: #ee2d1c;
+  --color-fore-blackish: #4c4c51;
+  --color-fore-blueish: #88939e;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Base styles following our design system */
+
+  h1 {
+    @apply text-[48px] leading-[48px] text-white;
+  }
+
+  h2 {
+    @apply text-[36px] leading-[36px] text-blackish;
+  }
+
+  h3 {
+    @apply text-[22px] leading-[28px] text-reddish;
+  }
+
+  p {
+    @apply text-[22px] leading-[28px] text-blackish;
+  }
+
+  a {
+    @apply text-[22px] leading-[28px] text-blueish hover:text-blackish cursor-pointer transition;
+  }
+
+  /* Custom classes following our design system */
+
+  .accent-gradient {
+    @apply bg-gradient-to-b from-[#ee2e1d] to-[#ffb1b5];
+  }
+
+  .horizontal {
+    @apply border-b border-b-[#e8e8e8];
+  }
+
+  .horizontal-top {
+    @apply border-t border-b-[#e8e8e8];
+  }
+
+  /* Custom layout classes */
+
+  .full-width-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+}
+
+@layer components {
+  .cta-btn {
+    @apply bg-reddish text-[22px] text-white py-3 px-8 rounded-full hover:opacity-70 transition whitespace-nowrap;
+  }
+}
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
