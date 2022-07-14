@@ -12,14 +12,12 @@ const Account: NextPage = () => {
       />
       <section className="flex flex-col justify-start items-center accent-gradient h-screen pt-12 transition px-4">
         <h1 className="text-center mb-24">Welcome back, Stefan</h1>
-        <div className="width-[300px] height-[500px]">
-          <Image
-            src={Cooking}
-            quality={60}
-            alt="Cooking delicious food"
-            objectFit="contain"
-          />
-        </div>
+        <Image
+          src={Cooking}
+          quality={60}
+          alt="Cooking delicious food"
+          placeholder="blur"
+        />
       </section>
     </>
   )
